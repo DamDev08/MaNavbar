@@ -54,7 +54,6 @@ header {
   position:absolute;
   top: 40px;
   right: 30px;
-  display: flex;
   gap: 2rem;
 }
 
@@ -64,6 +63,11 @@ header {
 
 .navbar .links a:hover {
   color: blueviolet;
+}
+
+.navbar .links ul{
+  display: flex;
+  gap: 1rem;
 }
 
 .navbar .menu-burger-btn {
@@ -80,9 +84,36 @@ header {
   .navbar {
     padding: 0;
   }
+
+  header {
+    background-color: transparent;
+  }
   
   .navbar .links {
-    display: none;
+    /*display: none;*/
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    top: 85px;
+    right: 20;
+    width: 100px;
+    height: 140px;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 20px;
+    border: 1px solid rgb(123, 0, 255);
+  }
+
+  .navbar .links ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;    
+  }
+
+  .navbar .links a {
+    font-size: 1rem;
+    color: #fff;
   }
 
   .navbar .menu-burger-btn {
